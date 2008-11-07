@@ -1,0 +1,30 @@
+Source: libtemplate-plugin-vmethods-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 5), libmodule-build-perl
+Build-Depends-Indep: perl (>= 5.6.10-12)
+Maintainer: Alexander Wirt <formorer@debian.org>
+Standards-Version: 3.8.0
+Homepage: http://search.cpan.org/dist/Template-Plugin-VMethods/
+
+Package: libtemplate-plugin-vmethods-perl
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}
+Description:  implement virtual methods for templatetoolkit 
+ Simple base class to allow your module to install and remove
+ virtual methods into the Template Toolkit.
+ .
+ All you need to do in your package is declare one or more of the
+ variables @LIST_OPS, @SCALAR_OPS or @HASH_OPS to indicate what
+ virtual methods you want to export.
+ .
+ These can either be the names of functions in your package, or
+ name/subroutine reference pairs.
+ .
+ For example, using named functions:
+ .
+ package Template::Plugin::HexVMethod;
+ use base qw(Template::Plugin::VMethods);
+ @SCALAR_OPS = ( "hex" );
+ sub hex { sprintf "%x", $_[0] };
+ 1;
