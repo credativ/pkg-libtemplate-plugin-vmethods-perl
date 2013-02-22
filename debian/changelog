@@ -1,3 +1,9 @@
+libtemplate-plugin-vmethods-perl (0.03-2) unstable; urgency=low
+
+  * [57d221f] Update deps
+
+ -- Alexander Wirt <formorer@debian.org>  Fri, 22 Feb 2013 14:34:02 +0100
+
 libtemplate-plugin-vmethods-perl (0.03-1) unstable; urgency=low
 
   * Initial Release.
