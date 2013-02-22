@@ -1,7 +1,7 @@
 Source: libtemplate-plugin-vmethods-perl
 Section: perl
 Priority: optional
-Build-Depends: debhelper (>= 5), libmodule-build-perl
+Build-Depends: debhelper (>= 5), libmodule-build-perl, libtemplate-perl
 Build-Depends-Indep: perl (>= 5.6.10-12)
 Maintainer: Alexander Wirt <formorer@debian.org>
 Standards-Version: 3.8.0
@@ -9,7 +9,7 @@ Homepage: http://search.cpan.org/dist/Template-Plugin-VMethods/
 
 Package: libtemplate-plugin-vmethods-perl
 Architecture: all
-Depends: ${perl:Depends}, ${misc:Depends}
+Depends: ${perl:Depends}, ${misc:Depends}, libtemplate-perl
 Description:  implement virtual methods for templatetoolkit 
  Simple base class to allow your module to install and remove
  virtual methods into the Template Toolkit.
